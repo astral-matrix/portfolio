@@ -1,6 +1,6 @@
-## Web Application Portfolio
+## Work Portfolio
 
-Below is a selection of web applications I’ve built over the years.
+A selection of past projects.
 
 ### VirtueRed Red Teaming Application 2025
 
