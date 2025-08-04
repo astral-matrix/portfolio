@@ -1,3 +1,5 @@
+### Projects:
+
 ### VirtueRed Red Teaming Application 2025
 
 - LLM Red Teaming application rebuild in Next.js
