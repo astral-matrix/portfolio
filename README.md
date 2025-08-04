@@ -1,4 +1,4 @@
-### Projects:
+### Past Work:
 
 ### VirtueRed Red Teaming Application 2025
 
