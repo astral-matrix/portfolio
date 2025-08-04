@@ -12,7 +12,7 @@
 - AI-driven music discovery application
 - Python, Javascript, React, Node.js, HTML, CSS
 
-<img src="images/searchthatsong2.png" alt="searchthatsong" width="700"/>
+<img src="images/searchthatsong.png" alt="searchthatsong" width="700"/>
 
 ---
 
