@@ -1,7 +1,3 @@
-## Work Portfolio
-
-A selection of past projects.
-
 ### VirtueRed Red Teaming Application 2025
 
 - LLM Red Teaming application rebuild in Next.js
