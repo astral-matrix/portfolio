@@ -1,4 +1,4 @@
-### Past Work:
+## [Projects]()
 
 ### VirtueRed Red Teaming Application 2025
 
