@@ -1,6 +1,6 @@
 ## [Projects]()
 
-### VirtueRed Red Teaming Application 2025
+### VirtueRed Red Teaming Application
 
 - LLM Red Teaming application rebuild in Next.js
 - Next.js, React, TypesScript, Node.js, HTML, CSS
@@ -9,7 +9,7 @@
 
 ---
 
-### [SearchThatSong.com](https://searchthatsong.com) 2004
+### [SearchThatSong.com](https://searchthatsong.com)
 
 - AI-driven music discovery application
 - Python, Javascript, React, Node.js, HTML, CSS
@@ -18,7 +18,7 @@
 
 ---
 
-### [SmallBusinessChatbot.com](https://SmallBusinessChatbot.com) 2004
+### [SmallBusinessChatbot.com](https://SmallBusinessChatbot.com)
 
 - AI-driven customer support chatbot
 - Python, Javascript, React, Node.js, HTML, CSS
@@ -27,7 +27,7 @@
 
 ---
 
-### Apple iCloud Webmail 2011-2018
+### Apple iCloud Webmail
 
 - Apple iCloud Webmail Application
 - Javascript, SproutCore, Ruby, Node.js, HTML, CSS
@@ -36,7 +36,7 @@
 
 ---
 
-### iCloud Mail Drop 2014
+### iCloud Mail Drop
 
 - Mail Drop feature for sending large attachments via iCloud Mail
 - Javascript, SproutCore, HTML, CSS
@@ -45,7 +45,7 @@
 
 ---
 
-### MobileMe/ iCloud AddressBook 2010-2014
+### MobileMe/ iCloud AddressBook
 
 - AddressBook feature for use across MobileMe and iCloud Web Applications
 - Javascript, SproutCore, HTML, CSS
@@ -54,7 +54,7 @@
 
 ---
 
-### Apple MobileMe Webmail 2009-2011
+### Apple MobileMe Webmail
 
 - Apple MobileMe Webmail Application
 - Javascript, SproutCore, Ruby, HTML, CSS
@@ -63,7 +63,7 @@
 
 ---
 
-### Apple Jobs 2006-2009
+### Apple Jobs
 
 - Apple Jobs Website
 - Javascript, PHP, HTML, CSS
