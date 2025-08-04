@@ -7,7 +7,7 @@
 
 ---
 
-### Searchthatsong.com 2024
+### [SearchThatSong.com](https://searchthatsong.com) 2004
 
 - AI-driven music discovery application
 - Python, Javascript, React, Node.js, HTML, CSS
@@ -16,7 +16,7 @@
 
 ---
 
-### SmallBusinessChatbot.com 2024
+### [SmallBusinessChatbot.com](https://SmallBusinessChatbot.com) 2004
 
 - AI-driven customer support chatbot
 - Python, Javascript, React, Node.js, HTML, CSS
