@@ -1,0 +1,149 @@
+---
+---
+
+// Import the Minimal theme's default styles
+@import "{{ site.theme }}";
+
+/* Dark theme overrides */
+body {
+  background-color: #121212;
+  color: #e2e2e2;
+}
+
+/* Headings – lighter than body text but not pure white */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f0f0f0;
+}
+
+/* Subtle horizontal rule for dark theme */
+hr {
+  border: none; /* remove default borders          */
+  height: 1px; /* thin line                       */
+  margin: 1.5rem 0; /* keep existing vertical spacing  */
+  background: rgba(255, 255, 255, 0.12); /* faint gray on #111 canvas       */
+}
+
+/* Links – a softer blue for dark backgrounds */
+// a {
+//   color: #64a8ff; /* calm blue */
+// }
+
+// a:hover {
+//   color: #8cc1ff; /* slightly lighter on hover */
+// }
+
+/* Override link colour */
+// a {
+//     color: #00bfa6;    /* teal accent */
+//   }
+
+//   a:hover {
+//     color: #33d5c0;    /* slightly lighter on hover */
+//   }
+
+// a {
+//   color: #bb86fc; /* soft purple */
+// }
+
+// a:hover {
+//   color: #cea7ff; /* lighter on hover */
+// }
+
+/* Dark purple accent for links */
+// a {
+//   color: #9a67ea; /* deep, readable purple */
+// }
+
+// a:hover {
+//   color: #b385f2; /* lighter on hover */
+// }
+
+/* ---------- Typography tweaks ---------- */
+
+/* ===== Option 1 – Calm Teal ===================================== */
+// a {
+//   color: #00bfa6;
+// }
+// a:hover {
+//   color: #33d5c0;
+// }
+
+/* ===== Option 2 – Soft Sky Blue ================================= */
+
+// a {
+//   color: #5fa9ff;
+// }
+// a:hover {
+//   color: #83bcff;
+// }
+
+/* ===== Option 3 – Emerald Green ================================= */
+
+// a       { color:#4cc37b; }
+// a:hover { color:#6fd099; }
+
+/* ===== Option 4 – Warm Amber ==================================== */
+
+// a {
+//   color: #ffb84d;
+// }
+// a:hover {
+//   color: #ffd185;
+// }
+
+/* ===== Option 5 – Electric Cyan ================================= */
+
+// a {
+//   color: #1bc9ff;
+// }
+// a:hover {
+//   color: #55d8ff;
+// }
+
+/* ===== Option 6 – Rose Pink ===================================== */
+
+// a       { color:#ff6fb5; }
+// a:hover { color:#ff93c7; }
+
+/* Base link colour Electric Cyan */
+/* Link accent: cyan + pill-style hover */
+/* Pill-hover links, baseline-aligned */
+/* ---------- Pill link baseline fix ---------- */
+/* ---------- Pill link (baseline) – keep this from earlier ---------- */
+/* ---------- Global pill-hover link (no padding hacks) ---------- */
+a {
+  display: inline-block; /* give pseudo-element a box to hug   */
+  position: relative; /* create containing block            */
+  color: #1bc9ff; /* normal cyan                        */
+  text-decoration: none; /* remove underline (optional)        */
+  transition: color 0.15s ease;
+}
+
+/* Pill background */
+a::after {
+  content: "";
+  position: absolute;
+
+  /* Expand slightly beyond the link’s text box on all sides          */
+  inset: -0.1em -0.35em; /* top/bottom, left/right extra space */
+  border-radius: 8px;
+
+  background: transparent; /* invisible until hover             */
+  transition: background 0.15s ease;
+  z-index: -1; /* place behind text                 */
+}
+
+/* Hover state */
+a:hover {
+  color: #55d8ff;
+  font-weight: inherit;
+}
+a:hover::after {
+  background: rgba(255, 255, 255, 0.1); /* subtle grey pill             */
+  font-weight: inherit;
+}
