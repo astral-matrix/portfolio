@@ -1,5 +1,14 @@
 ## [Projects]()
 
+### Markdown to PDF Converter for ChatGPT
+
+- A full-stack web application that converts ChatGPT markdown to beautifully styled PDFs with customizable typography layout options, and code syntax highlighting.
+- Python, TypesScript, Next.js, React, Node.js, HTML, CSS
+
+<img src="images/markdown-to-pdf.png" alt="Markdown to PDF Converter" width="700"/>
+
+---
+
 ### VirtueRed Red Teaming Application
 
 - LLM Red Teaming application rebuild in Next.js
