@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% assign projects_page = site.pages | where: "name", "projects.md" | first %}
+    {% assign project_id = page.name | remove: ".md" %}
+    {% assign project = projects_page.projects | where: "id", project_id | first %}
+    {% assign project = project | default: page %}
+    {% assign detail = project.detail | default: project %}
+    {% assign project_title = project.title | default: page.title %}
+    {% assign hero_image = detail.detail_image | default: project.image %}
+    {% assign github_url = detail.github_url | default: project.github_url %}
+    <title>{{ project_title }} | {{ site.title }}</title>
+    <link rel="preload" as="image" href="{{ "/images/profile.webp" | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  </head>
+  <body class="site-body" data-baseurl="{{ site.baseurl | default: "" }}">
+    <div class="site-grid">
+      <aside class="sidebar">
+        <a class="sidebar-profile" href="{{ "/" | relative_url }}">
+          <div class="profile-image-mask">
+            <picture>
+              <source srcset="{{ "/images/profile.webp" | relative_url }}" type="image/webp">
+              <img class="profile-image" src="{{ "/images/profile.png" | relative_url }}" alt="Andrew Johnson" loading="eager" fetchpriority="high" decoding="async" width="84" height="84">
+            </picture>
+          </div>
+          <div class="profile-meta">
+            <h1 class="profile-name">Andrew Johnson</h1>
+            <p class="profile-title">Senior Software Engineer</p>
+          </div>
+        </a>
+
+        {% assign current_url = page.url | downcase %}
+        <nav class="nav-primary" aria-label="Primary navigation">
+          <a href="{{ "/projects" | relative_url }}" class="{% if current_url contains "/projects" or page.layout == "project" %}is-active{% endif %}">Projects</a>
+          <a href="{{ "/about" | relative_url }}" class="{% if current_url contains "/about" %}is-active{% endif %}">About</a>
+
+          <!-- <a href="{{ "/skills" | relative_url }}" class="{% if current_url contains "/skills" %}is-active{% endif %}">Skills</a> -->
+        </nav>
+
+        <div class="sidebar-contacts" aria-label="Contact links">
+          <a class="contact-link" href="mailto:drew_johnson@me.com">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.01l8 5 8-5V8H4zm0 2.3V16h16v-5.7l-7.4 4.6a1.2 1.2 0 0 1-1.2 0L4 10.3z"/></svg>
+            </span>
+            <span>drew_johnson@me.com</span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/ajohnson-swe/" target="_blank" rel="noopener">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.8 8.6H3.2V20h3.6V8.6zm-1.8-5A2.1 2.1 0 1 0 5 7.8 2.1 2.1 0 0 0 5 3.6zM20.8 13.3c0-3.1-1.6-4.6-3.9-4.6-1.8 0-2.6 1-3 1.7v-1.5H10.4V20h3.6v-6.1c0-1.6.3-3.2 2.2-3.2s1.9 1.7 1.9 3.3V20h3.6z"/></svg>
+            </span>
+            <span>LinkedIn</span>
+          </a>
+          <a class="contact-link" href="https://github.com/astral-matrix" target="_blank" rel="noopener">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1 3 0 .1-.6.3-1 .6-1.3-2.3-.2-4.7-1.1-4.7-4.8 0-1 .4-1.9 1-2.6-.1-.2-.4-1.2.1-2.5 0 0 .8-.2 2.6 1a9 9 0 0 1 4.8 0c1.8-1.2 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.5.7.7 1 1.6 1 2.6 0 3.7-2.4 4.6-4.7 4.8.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2z"/></svg>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="contact-link" href="{{ "/resume.pdf" | relative_url }}">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.8H8V12zm0 4h8v1.8H8V16z"/></svg>
+            </span>
+            <span>Resume (PDF)</span>
+          </a>
+        </div>
+
+        <div class="sidebar-skills">
+          <p class="sidebar-section-title">Skills &amp; Tools</p>
+          <div class="skill-pills">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Next.js</span>
+            <span>Node.js</span>
+            <span>AI integrations</span>
+            <span>Tailwind CSS</span>
+            <span>PostgreSQL</span>
+            <span>GraphQL</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="project-page-header">
+          <div class="breadcrumb">
+            {% if detail.breadcrumb and detail.breadcrumb != "" %}
+            {% assign breadcrumb_parts = detail.breadcrumb | split: "/" %}
+            <span>{{ breadcrumb_parts[0] | strip }}</span>
+            {% if breadcrumb_parts.size > 1 %}
+            <span class="breadcrumb-sep">/</span>
+            <span>{{ breadcrumb_parts[1] | strip }}</span>
+            {% endif %}
+            {% else %}
+            <span>Projects</span>
+            <span class="breadcrumb-sep">/</span>
+            <span>{{ project_title }}</span>
+            {% endif %}
+          </div>
+          <a href="{{ "/" | relative_url }}" class="back-link" data-back-link>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5.5 9 12l6.5 6.5-1.4 1.4L6.2 12l7.9-7.9z"/></svg>
+            Back to Projects
+          </a>
+        </div>
+
+        <section class="project-page-hero">
+          {% if detail.heading and detail.heading != "" %}
+          <h1 class="project-page-title">{{ detail.heading }}</h1>
+          {% endif %}
+          {% if detail.description and detail.description != "" %}
+          <p class="project-page-description">{{ detail.description }}</p>
+          {% endif %}
+
+          {% if project.tags and project.tags.size > 0 or github_url %}
+          <div class="project-page-tags">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+            {% if github_url %}
+            <a href="{{ github_url }}" class="tag tag-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1 3 0 .1-.6.3-1 .6-1.3-2.3-.2-4.7-1.1-4.7-4.8 0-1 .4-1.9 1-2.6-.1-.2-.4-1.2.1-2.5 0 0 .8-.2 2.6 1a9 9 0 0 1 4.8 0c1.8-1.2 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.5.7.7 1 1.6 1 2.6 0 3.7-2.4 4.6-4.7 4.8.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2z"/></svg>
+              GitHub
+            </a>
+            {% endif %}
+          </div>
+          {% endif %}
+        </section>
+
+        <section class="project-page-content">
+          <div class="project-page-grid">
+            <div class="project-page-image-col">
+              <div class="project-page-image">
+                {% assign gallery_images = detail.gallery %}
+                {% if gallery_images == nil or gallery_images.size == 0 %}
+                  {% assign gallery_images = "" | split: "" %}
+                  {% if hero_image %}
+                    {% assign gallery_images = gallery_images | push: hero_image %}
+                  {% endif %}
+                {% endif %}
+                {% if gallery_images.size > 1 %}
+                  {% assign has_gallery_controls = true %}
+                {% else %}
+                  {% assign has_gallery_controls = false %}
+                {% endif %}
+                <div class="project-gallery" data-gallery>
+                  <div class="gallery-viewport">
+                    <div class="gallery-track" data-gallery-track>
+                      {% for image in gallery_images %}
+                      <div class="gallery-slide" data-gallery-slide>
+                        <img src="{{ image | relative_url }}" alt="{{ project_title }}">
+                      </div>
+                      {% endfor %}
+                    </div>
+                    {% if has_gallery_controls %}
+                    <button class="gallery-nav is-prev" type="button" data-gallery-prev aria-label="Previous image">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5.5 9 12l6.5 6.5-1.4 1.4L6.2 12l7.9-7.9z"/></svg>
+                    </button>
+                    <button class="gallery-nav is-next" type="button" data-gallery-next aria-label="Next image">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5.5 1.4-1.4L17.8 12l-7.9 7.9-1.4-1.4L15 12z"/></svg>
+                    </button>
+                    {% endif %}
+                  </div>
+                  {% if has_gallery_controls %}
+                  <div class="gallery-dots" data-gallery-dots>
+                    {% for image in gallery_images %}
+                    <button class="gallery-dot" type="button" data-gallery-dot data-index="{{ forloop.index0 }}" aria-label="Go to image {{ forloop.index }}"></button>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                  <div class="gallery-lightbox" data-gallery-lightbox>
+                    <button class="gallery-close" type="button" data-gallery-close aria-label="Close image">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.6 5.2 5.4 5.4 5.4-5.4 1.4 1.4-5.4 5.4 5.4 5.4-1.4 1.4-5.4-5.4-5.4 5.4-1.4-1.4 5.4-5.4-5.4-5.4z"/></svg>
+                    </button>
+                    <img src="" alt="{{ project_title }}">
+                  </div>
+                </div>
+              </div>
+              {% if detail.features %}
+              <div class="project-features">
+                {% for feature in detail.features %}
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+                  <span>{{ feature }}</span>
+                </div>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+            <div class="project-page-details-col">
+              <div class="detail-tabs" data-detail-tabs>
+                <button class="detail-tab active" type="button" data-tab="overview">Overview</button>
+                <button class="detail-tab" type="button" data-tab="technical">Technical Details</button>
+              </div>
+
+              <div class="detail-panel" data-tab-content="overview">
+                {% if detail.objective and detail.objective != "" %}
+                <h3 class="detail-section-title">Objective</h3>
+                <p class="detail-text">{{ detail.objective }}</p>
+                {% endif %}
+
+                {% if detail.role and detail.role != "" %}
+                <h3 class="detail-section-title">My Role</h3>
+                <p class="detail-text">{{ detail.role }}</p>
+                {% endif %}
+
+                {% if detail.key_features and detail.key_features.size > 0 %}
+                  {% assign has_key_features = true %}
+                {% else %}
+                  {% assign has_key_features = false %}
+                {% endif %}
+                {% if detail.impact and detail.impact.size > 0 %}
+                  {% assign has_impact = true %}
+                {% else %}
+                  {% assign has_impact = false %}
+                {% endif %}
+                {% if has_key_features or has_impact %}
+                <div class="detail-two-col">
+                  {% if has_key_features %}
+                  <div>
+                    <h3 class="detail-section-title">Key Features</h3>
+                    <ul class="detail-list">
+                      {% for item in detail.key_features %}
+                      <li>{{ item }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  {% endif %}
+                  {% if has_impact %}
+                  <div>
+                    <h3 class="detail-section-title">Impact</h3>
+                    <ul class="detail-list">
+                      {% for item in detail.impact %}
+                      <li>{{ item }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  {% endif %}
+                </div>
+                {% endif %}
+
+                {% if detail.demo_url and detail.demo_url != "" and detail.demo_url != "#" %}
+                <div class="detail-links">
+                  <a href="{{ detail.demo_url }}" class="demo-link" target="_blank" rel="noopener">
+                    {{ detail.demo_label | default: "Visit Live Demo" }}
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-2 16H5V7h7V5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h-2v7z"/></svg>
+                  </a>
+                </div>
+                {% endif %}
+              </div>
+
+              <div class="detail-panel is-hidden" data-tab-content="technical">
+                {% if detail.stack and detail.stack.size > 0 %}
+                <h3 class="detail-section-title">Technology Stack</h3>
+                <div class="stack-row">
+                  {% for item in detail.stack %}
+                  <span>{{ item }}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if detail.libraries and detail.libraries.size > 0 %}
+                <h3 class="detail-section-title">Libraries</h3>
+                <div class="stack-row">
+                  {% for item in detail.libraries %}
+                  <span>{{ item }}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="{{ "/assets/main.js" | relative_url }}" defer></script>
+  </body>
+</html>
