@@ -83,6 +83,35 @@
 
 ---
 
+## Local Preview Server
+
+### Jekyll/Bundler commands:
+
+```
+# install dependencies
+# reads Gemfile and installs all required gems
+bundle install
+
+# updates all gems to their latest versions (within Gemfile constraints)
+bundle update
+
+# start local server
+# builds and serves the site at http://localhost:4000 with live reload
+bundle exec jekyll serve
+
+# build site only (no server):
+# generates the static site into the _site directory
+```
+
+Useful flags for serve:
+
+```
+--livereload  # Auto-refresh browser on changes
+--drafts  # Include draft posts
+--port 5000 # Use a different port
+--host 0.0.0.0 # Make accessible on your network
+```
+
 Check out my [GitHub repositories](https://github.com/astral-matrix) for additional projects and code samples.
 
 _© 2025 Andrew Johnson._
