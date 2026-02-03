@@ -1,3 +1,46 @@
+const prefersReducedMotion = () =>
+  window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const setupSwipeScroll = (container, options = {}) => {
+  if (!container) return;
+
+  const {
+    threshold = 40,
+    axis = "x",
+    getScrollBy = () => Math.max(container.clientWidth * 0.85, 280),
+  } = options;
+
+  let startX = 0;
+  let startY = 0;
+  let isPointerDown = false;
+
+  const onPointerDown = (event) => {
+    if (event.pointerType === "mouse") return;
+    isPointerDown = true;
+    startX = event.clientX;
+    startY = event.clientY;
+  };
+
+  const onPointerUp = (event) => {
+    if (!isPointerDown) return;
+    isPointerDown = false;
+
+    const deltaX = event.clientX - startX;
+    const deltaY = event.clientY - startY;
+
+    if (axis === "x" && Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > threshold) {
+      container.scrollBy({
+        left: deltaX < 0 ? getScrollBy() : -getScrollBy(),
+        behavior: prefersReducedMotion() ? "auto" : "smooth",
+      });
+    }
+  };
+
+  container.addEventListener("pointerdown", onPointerDown, { passive: true });
+  container.addEventListener("pointerup", onPointerUp, { passive: true });
+  container.addEventListener("pointercancel", onPointerUp, { passive: true });
+};
+
 const setupCarousel = () => {
   const track = document.querySelector("[data-carousel-track]");
   const prev = document.querySelector("[data-carousel-prev]");
@@ -8,12 +51,14 @@ const setupCarousel = () => {
   const scrollBy = () => Math.max(track.clientWidth * 0.85, 280);
 
   prev.addEventListener("click", () => {
-    track.scrollBy({ left: -scrollBy(), behavior: "smooth" });
+    track.scrollBy({ left: -scrollBy(), behavior: prefersReducedMotion() ? "auto" : "smooth" });
   });
 
   next.addEventListener("click", () => {
-    track.scrollBy({ left: scrollBy(), behavior: "smooth" });
+    track.scrollBy({ left: scrollBy(), behavior: prefersReducedMotion() ? "auto" : "smooth" });
   });
+
+  setupSwipeScroll(track, { getScrollBy: scrollBy });
 };
 
 const setupTabs = () => {
@@ -261,6 +306,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
   setupProjectGalleries();
   setupTagFilters();
+
+  const swipeGrids = Array.from(document.querySelectorAll("[data-swipe-scroll]"));
+  swipeGrids.forEach((grid) => setupSwipeScroll(grid));
 
   const backLink = document.querySelector("[data-back-link]");
   if (backLink) {

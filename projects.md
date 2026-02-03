@@ -285,7 +285,7 @@ projects:
 </div>
 
 <section class="projects-gallery">
-  <div class="projects-grid projects-grid--page" data-tag-filter-grid>
+  <div class="projects-grid projects-grid--page" data-tag-filter-grid data-swipe-scroll>
     {% for project in page.projects %}
     <a href="{{ "/projects/" | append: project.id | relative_url }}?from=projects" class="project-card" data-tag-filter-item data-tags="{{ project.tags | join: "|" | downcase }}">
       <h3 class="project-title">{{ project.title }}</h3>
