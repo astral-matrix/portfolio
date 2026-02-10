@@ -11,8 +11,8 @@ title: Home
     </div>
     <div class="hero-actions">
       <a class="action-button primary" href="{{ "ajohnson_resume.pdf" | relative_url }}" download="ajohnson_resume.pdf">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.8H8V12zm0 4h8v1.8H8V16z"/></svg>
-        View Resume
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm2 4v2h10V8H7zm0 4v2h7v-2H7z"/></svg>
+        Resume
       </a>
       <a class="action-button" href="mailto:drew_johnson@me.com">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.01l8 5 8-5V8H4zm0 2.3V16h16v-5.7l-7.4 4.6a1.2 1.2 0 0 1-1.2 0L4 10.3z"/></svg>
