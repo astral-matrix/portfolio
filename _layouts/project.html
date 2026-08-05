@@ -37,6 +37,7 @@
         {% assign current_url = page.url | downcase %}
         <nav class="nav-primary" aria-label="Primary navigation">
           <a href="{{ "/projects" | relative_url }}" class="{% if current_url contains "/projects" or page.layout == "project" %}is-active{% endif %}">Projects</a>
+          <a href="{{ "/robotics" | relative_url }}" class="{% if current_url contains "/robotics" %}is-active{% endif %}">Robotics</a>
           <a href="{{ "/about" | relative_url }}" class="{% if current_url contains "/about" %}is-active{% endif %}">About</a>
 
           <!-- <a href="{{ "/skills" | relative_url }}" class="{% if current_url contains "/skills" %}is-active{% endif %}">Skills</a> -->

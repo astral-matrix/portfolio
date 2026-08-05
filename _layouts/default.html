@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
     <link rel="preload" as="image" href="{{ "/images/profile.webp" | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   </head>
-  <body class="site-body" data-baseurl="{{ site.baseurl | default: "" }}">
+  <body class="site-body{% if page.body_class %} {{ page.body_class }}{% endif %}" data-baseurl="{{ site.baseurl | default: "" }}">
     <div class="site-grid">
       <aside class="sidebar">
         <a class="sidebar-profile" href="{{ "/" | relative_url }}">
@@ -29,6 +32,7 @@
         {% assign current_url = page.url | downcase %}
         <nav class="nav-primary" aria-label="Primary navigation">
           <a href="{{ "/projects" | relative_url }}" class="{% if current_url contains "/projects" %}is-active{% endif %}">Projects</a>
+          <a href="{{ "/robotics" | relative_url }}" class="{% if current_url contains "/robotics" %}is-active{% endif %}">Robotics</a>
           <a href="{{ "/about" | relative_url }}" class="{% if current_url contains "/about" %}is-active{% endif %}">About</a>
           <!-- <a href="{{ "/skills" | relative_url }}" class="{% if current_url contains "/skills" %}is-active{% endif %}">Skills</a> -->
         </nav>
