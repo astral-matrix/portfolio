@@ -31,7 +31,7 @@ body_class: robotics-page
     <!-- <h3>Robotics Engineering</h3> -->
     <div class="robotics-media-grid">
       <figure>
-        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics2.jpg" alt=""></div>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/portfolio/images/r2electronics2.jpg" alt=""></div>
         <figcaption></figcaption>
       </figure>
         <!-- <figure>
