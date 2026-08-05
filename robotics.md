@@ -35,28 +35,27 @@ body_class: robotics-page
         <figcaption></figcaption>
       </figure>
         <!-- <figure>
-        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics5.jpg" alt=""></div>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/portfolio/images/r2electronics5.jpg" alt=""></div>
         <figcaption></figcaption>
       </figure> -->
    <figure>
-        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2shoulderlinkage2.jpg" alt=""></div>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/portfolio/images/r2shoulderlinkage2.jpg" alt=""></div>
         <figcaption></figcaption>
       </figure>
                <figure>
-        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics3.jpg" alt=""></div>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/portfolio/images/r2electronics3.jpg" alt=""></div>
         <figcaption></figcaption>
       </figure>
          <figure>
-        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics5.jpg" alt=""></div>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/portfolio/images/r2electronics5.jpg" alt=""></div>
         <figcaption></figcaption>
       </figure>
-
                 <figure>
-        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2footlinkage1.jpg" alt=""></div>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/portfolio/images/r2footlinkage1.jpg" alt=""></div>
         <figcaption></figcaption>
       </figure>
             <figure>
-        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2footdrives3.jpg" alt=""></div>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/portfolio/images/r2footdrives3.jpg" alt=""></div>
         <figcaption></figcaption>
       </figure>
 
