@@ -8,7 +8,7 @@ body_class: robotics-page
 
 <section class="robotics-hero" id="top">
   <div class="robotics-hero-copy">
-    <p class="robotics-kicker"> Robotics Engineering</p>
+    <p class="robotics-kicker"> Robotics</p>
     <h1>Full-stack engineer building robots</h1>
     <p>
      I build full-stack software and physical robotic systems. My robotics work includes designing and fabricating full-scale, 12-volt R2D2 droids, integrating drive systems, lighting, audio, controls, body fabrication, batteries, and field-serviceable electronics.
@@ -24,25 +24,44 @@ body_class: robotics-page
 <section class="robotics-section" id="robotics">
   <div class="robotics-section-header">
     <p class="robotics-kicker">Robotics</p>
-    <h2>Working robots, integration, and field operation</h2>
+    <h2>Robotics Engineering, Control, and Drive Systems</h2>
   </div>
 
   <div class="robotics-group">
-    <h3>Working Robots</h3>
+    <!-- <h3>Robotics Engineering</h3> -->
     <div class="robotics-media-grid">
       <figure>
-        <div class="robotics-media-placeholder"><span>Video/photo</span></div>
-        <figcaption>Life-size 12V R2-D2 operating in a public environment.</figcaption>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics2.jpg" alt=""></div>
+        <figcaption></figcaption>
       </figure>
-      <figure>
-        <div class="robotics-media-placeholder"><span>Video/photo</span></div>
-        <figcaption>Drive, turning, lighting, and audio systems integrated for field use.</figcaption>
+        <!-- <figure>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics5.jpg" alt=""></div>
+        <figcaption></figcaption>
+      </figure> -->
+   <figure>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2shoulderlinkage2.jpg" alt=""></div>
+        <figcaption></figcaption>
       </figure>
-      <figure>
-        <div class="robotics-media-placeholder"><span>Video/photo</span></div>
-        <figcaption>Operator-controlled interaction showing responsiveness and safe presentation.</figcaption>
+               <figure>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics3.jpg" alt=""></div>
+        <figcaption></figcaption>
       </figure>
+         <figure>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2electronics5.jpg" alt=""></div>
+        <figcaption></figcaption>
+      </figure>
+
+                <figure>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2footlinkage1.jpg" alt=""></div>
+        <figcaption></figcaption>
+      </figure>
+            <figure>
+        <div class="robotics-media-image"> <img class="robotics-media-image" src="/images/r2footdrives3.jpg" alt=""></div>
+        <figcaption></figcaption>
+      </figure>
+
     </div>
+
   </div>
 
   <!-- <div class="robotics-group">
@@ -78,7 +97,7 @@ body_class: robotics-page
   </div>-->
 </section>
 
-<section class="robotics-section robotics-two-column">
+<!-- <section class="robotics-section robotics-two-column">
   <div>
     <p class="robotics-kicker">Robots for Events</p>
     <h2>R2 Droids built for events and live operation</h2>
@@ -91,7 +110,7 @@ body_class: robotics-page
     <li>Built for transportability, maintainability, and event reliability</li>
 
   </ul>
-</section>
+</section> -->
 
 <!-- <section class="robotics-section robotics-brief">
   <div>
