@@ -9,11 +9,11 @@ body_class: robotics-page
 <section class="robotics-hero" id="top">
   <div class="robotics-hero-copy">
     <p class="robotics-kicker"> Robotics</p>
-    <h1>Full-stack engineer building robots</h1>
+    <h1>I like to build robots</h1>
     <p>
-     I build full-stack software and physical robotic systems. My robotics work includes designing and fabricating full-scale, 12-volt R2D2 droids, integrating drive systems, lighting, audio, controls, body fabrication, batteries, and field-serviceable electronics.
+     I build full-stack apps and robotic systems. My robotics work includes designing and building full-scale R2D2 droids, integrating microcontrollers, drive systems, lighting, audio, power, and custom-fabricated components.
     </p>
-    <p>My R2 has appeared at LucasFilm events, conventions, and robotics fairs</p>
+    <p>My robots have appeared at LucasFilm events and other exhibitions and gatherings.</p>
   </div>
   <figure class="robotics-hero-media">
     <img class="robotics-hero-image" src="{{ "/images/r2_lucasfilm.jpg" | relative_url }}" alt="Andrew Johnson operating a life-size R2-D2 at a Lucasfilm event">
